@@ -1,0 +1,4 @@
+﻿  Lab2.cpp
+C:\Users\ethan\source\repos\Labs\Lab2\Lab2.cpp(29,8): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\ethan\source\repos\Labs\Lab2\Lab2.cpp(56,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ethan\source\repos\Labs\Lab2\Lab2.cpp(52): error C4700: использована неинициализированная локальная переменная "p"
