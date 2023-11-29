@@ -11,7 +11,7 @@ public:
 	vector<taxi> get_taxis();
 	void push_front(string brand_name, string taxidriver_name);
 	void insert(string brand_name, string taxidriver_name, int beforeitem);
-	void pop(int number);
+	void remove(int number);
 	void exit(int number);
 	void release(int number);
 	vector<taxi> get_free_taxis();

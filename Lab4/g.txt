@@ -1,0 +1,28 @@
+streammode
+a 11
+b 3
+c 11
+d 4
+e 8
+f 1
+filemode
+a 11 
+b 3 
+c 11 
+d 4 
+e 8 
+f 1 
+streammode
+a 11
+b 3
+c 11
+d 4
+e 8
+f 1
+filemode
+a 11 
+b 3 
+c 11 
+d 4 
+e 8 
+f 1 

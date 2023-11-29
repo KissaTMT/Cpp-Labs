@@ -22,22 +22,19 @@ int main()
 {
     setlocale(LC_ALL, "RUSSIAN");
     queue<taxi> queue;
-
     queue.push(taxi(100,"BMV","Kisa"));
     queue.push(taxi(101,"Shevrolet","Olga"));
     queue.push(taxi(102,"Nisan","Vladislave"));
     queue.push(taxi(103,"Ferrary","Pavel"));
     queue.push(taxi(104,"TelegaEpta","Markdown"));
     queue.push(taxi(105,"Peshkom","Hazar"));
-
     taxi_controller controller(queue);
-
     while (true) {
-        cout << "getall | push | insert | pop | exit | release | getfree | getbusy | close" << endl;;
+        cout << "getall | push | insert | remove | exit | release | getfree | getbusy | close" << endl;;
         string key;
         cin >> key;
         if (key == "getall") {
-            auto all_taxi = controller.get_taxis();
+            vector<taxi> all_taxi = controller.get_taxis();
             if (!all_taxi.empty()) {
                 for (int i = 0; i < all_taxi.size(); i++) {
                     cout << string(all_taxi[i]) << endl;
@@ -61,10 +58,10 @@ int main()
             try_input(&afterNumber);
             controller.insert(carbrand_name, taxidriver_name, afterNumber);
         }
-        if (key == "pop") {
+        if (key == "remove") {
             int number;
             try_input(&number);
-            controller.pop(number);
+            controller.remove(number);
         }
         if (key == "exit") {
             int number;
