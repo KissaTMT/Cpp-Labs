@@ -1,45 +1,24 @@
 ﻿#include <iostream>
+#include <cmath>
+#include <vector>
+#include "ev_matrix.h"
 
 using namespace std;
-struct Date {
-    int day;
-    int month;
-    int year;
-};
-Date try_input_date() {
-    int day;
-    int month;
-    int year;
-    while (true) {
-        cin >> day;
-        if (cin.get() != '/')
-        {
-            cout << "expected /\n";
+
+int main() {
+   
+    ev_matrix m(3);
+    m.random();
+    m.inverse_iteration();
+    auto v = m.eigen_vectors;
+
+    for (int i = 0; i < v.size(); i++) {
+
+        for (int j = 0; j < v[i].size; j++) {
+            cout << v[i].get(j) << " ";
         }
-        cin >> month;
-        if (cin.get() != '/')
-        {
-            cout << "expected /\n";
-        }
-        cin >> year;
-        if (day >= 1 && day <= 31) {
-            if (month >= 1 && month <= 12) {
-                if (year >= 2023 && year <= 2025) {
-                    Date date;
-                    date.day = day;
-                    date.month = month;
-                    date.year = year;
-                    return date;
-                }
-            }
-        }
-        else cout << "Incorrect format date. Try again";
+        cout << endl;
     }
-}
-int main()
-{
-    Date date = try_input_date();
-    cout << date.day<<endl;
-    cout << date.month<<endl;
-    cout << date.year<<endl;
+
+    return 0;
 }
